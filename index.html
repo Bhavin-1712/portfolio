@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			color: #2C2D2F;
+		}
+		body,section,div,span,p,ul,li{
+			font-size: 1.2rem;
+			font-weight: 500;
+		}
+		section{
+			margin-bottom: 9%;
+			background-color: transparent;
+			border-radius: 10px	;
+			margin-right: 5%;
+		}
+		nav{
+			height: 100vh;
+			width: 16vw;
+			background-color: #17181B;
+			position: fixed;
+		}
+		#about-me div div div ul li span{
+			font-weight: 600;
+			border-bottom: 1px solid #00A3E1;
+		}
+		#about-me div div div ul li {
+			margin: 5% 0%;
+		}
+		.skill-back{
+			width: 30vw;
+			height: 2.5vh;
+			background-color: #2C2D2F;
+			display: inline-block;
+			border-radius: 20px 20px 20px 20px;
+		}
+		td{
+			padding: 0% 0% 3% 0%;
+		}
+		.skill-up{
+			background-color: #0488BD;
+			height: 2.5vh;
+			border-radius: 20px 0px 0px 20px;
+		}
+		.disp{
+			display: flex;
+		}
+		p{
+			display: inline-block;
+		}
+		.wid70{
+			width: 70%;
+		}
+		#education div div div{
+			display: block;
+			margin-bottom: 4%;
+		}
+		#education div div div p{
+			display: block;
+		}
+		.edu1{
+			font-size: 1.2rem;
+			color: black;
+			font-weight: 700;
+		}
+
+		.edu2{
+			font-size: 2rem;
+			color: #0488BD;
+		}
+
+		.edu3{
+			font-size: 1.8rem;
+			color: black;
+			font-weight: 1200;
+		}
+
+		.edu4{
+			font-size: 1rem;
+			color: black;
+		}
+		header{
+			margin:40vh 0%;
+		}
+		input{
+			border: none;
+			border-bottom: 1px solid #77797C;
+			background-color: transparent;
+			font-size: 1.2rem;
+		}
+		#fname,#lname{
+			width: 15%;
+			margin: 1% 0%;
+		}
+		#email,#topic{
+			width: 20%;
+			margin: 1% 0%;
+		}
+		button{
+			border:2px solid #00A3E1;
+			padding: 6px;
+			background-color: transparent;
+			color:#00A3E1;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: 0.3s ease-in-out;
+		}
+		button:hover{
+			background-color: #00A3E1;
+			color: #FFFFFF;
+			border-color: #00A3E1;
+		}
+		#sidebar{
+			height: 100vh;
+			width: 16vw;
+			background-color: #17181B;
+			position: fixed;
+		}
+		#sidebar ul li{
+			margin: 4% 0%;
+			text-align: center;
+			font-size: 1.2rem;
+			padding: 5px 0;
+			border-bottom: 0.1px solid #818181;
+		}
+		#sidebar ul li a{
+			text-decoration: none;
+			color: #C2C7CB;
+			transition: 0.4s ease-out;
+		}
+		#sidebar ul li a:hover{
+			color: #00A3E1;
+		}
+		.shrink{
+			float: right;width: 80%;
+		}
+		#topbar{
+			visibility: hidden;
+			background: transparent;
+			top: 0;
+			transition: top 0.3s;
+			position: fixed;
+			width: 100%;
+			border-radius: 0 0 15% 15%;
+		}
+		#topbar ul li{
+			display: inline;
+			font-size: 1.1rem;
+			margin: 0 5px;
+			line-height: 3rem;
+		}
+		#topbar ul li a{
+			text-decoration: none;
+			transition: 0.3s ease-out;
+			color: #C2C7CB;
+		}
+		#topbar ul li a:hover{
+			color: #FFFFFF;
+			border-bottom: 0.1px solid #00A3E1;
+		}
+		@media only screen and (max-width: 1030px){
+			#fname,#lname,#email,#topic{
+				width: 75%;
+			}
+		}
+		@media only screen and (max-width: 980px){
+			#sidebar{
+				display: none;
+				visibility: hidden;
+			}
+			.shrink{
+				float: left;
+				width: 100%;
+			}
+			section{
+				margin: 0 1%;
+			}
+			nav{
+				height: auto;
+				width: auto;
+				background-color: #17181B;
+				position: relative;
+			}
+			#topbar{
+				visibility: visible;
+			}
+		}
+		@media only screen and (max-width: 920px){
+			.disp{
+				display: block;
+			}
+			.wid70{
+				width: auto;
+			}
+			.skill-up,.skill-back{
+				height: 2vh;
+			}
+			.skill-back{
+				width: 40vw;
+			}
+			.edu2{
+				font-size: 1.8rem;
+			}
+			#education div div div{
+				margin-bottom: 6%;
+			}
+			header{
+				margin: 40% 0%;
+			}
+		}
+		@media only screen and (max-width:  620px){
+			td{
+				display: block;
+			}
+			.skill-up,.skill-back{
+				height: 2vh;
+			}
+			.skill-back{
+				width: 50vw;
+			}
+			header p{
+				letter-spacing: 0px !important;
+			}
+			#topbar{
+				visibility: hidden;
+			}
+			header center div p{
+				font-size: 2rem !important;
+			}
+		}
+		
+	</style>
+</head>
+<body style="background-image: url(a.jpg); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+	<nav id="sidebar">
+		<div style="height: 30vh;background-image: url(ab.jpeg);background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+		<p style="width: 100%;text-align: center;background-color: rgba(0%, 63.92%, 88.24%, 0.7);line-height: 2.4rem;font-size: 1.3rem;color: white;letter-spacing: 1px;">Agravat Bhavin</p>
+		<ul style="list-style: none;">
+			<li><a href="#">Home</a></li>
+			<li><a href="#about-me">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#education">Education</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	<nav id="topbar" style="background-color: #2C2D2F;">
+		<center>
+			<ul style="list-style:none;">
+				<li><a href="#">Home</a></li>
+				<li><a href="#about-me">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</center>
+	</nav>
+	<div class="shrink">	
+		<header>
+			<center>
+			<div>
+			<p style="color:black;font-size: 3.2rem;letter-spacing: 5px;">BHAVIN<span style="color:black;font-size: 3.2rem;">&nbspAGRAVAT</span></p>
+			<br></div>
+			<p style="color:black;font-size: 2rem;">I am a <span style="color:red;font-size: 2rem;">Web Devloper</span>.</p></center>
+		</header>
+		
+		<section id="about-me">
+			<div style="margin: 1% 3%;padding: 1%;">
+				<div style="font-size: 3rem;font-weight: 900; color:#00A3E1;">About Me</div>
+				<div class="disp">
+					<div style="margin: 3% 3% 0% 0%;" class="wid70">
+						<p style="font-size: 1.7rem;font-weight: 600;margin-bottom: 3vh;color: #FFFFFF;"> </p>
+						<p style="line-height: 2.5rem;border-left: 3px groove #77797C;padding-left: 10px;">I am Agravat Bhavin.I have done many programs in java and c++. Also a few in python,html and css.Mostly i learned or skilled data dataructures. I have also done some pages in html.<br><br> I would like to work in an organization which provides me with opportunities to enhance my skills and knowledge along with contributing to the growth of the organization. I look forward to learning.</p>
+						<p style="margin:5% 0%;color: #FFFFFF; font-size: 3rem;">B.Agravat</p>
+					</div>
+					<div style="margin: 3% 0% 0% 0%;" class=" ">
+						<p style="color: #FFFFFF;font-size:1.7rem;font-weight: 600;margin-bottom: 1.2vh;">Personal Details</p>
+						<ul style="list-style: none;border-left: 3px groove #77797C;padding-left: 10px;">
+							<li><span>Name</span><p>&nbsp:&nbspAgravat Bhavin</p></li>
+							<li><span>DOB</span><p>&nbsp:&nbsp17/12/2001</p></li>
+							<li><span>Address</span><p>&nbsp:&nbspJunagadh,Gujrat,India.</p></li>
+							<li><span>Email</span><p>&nbsp:&nbspsanobey3431@gmail.com</p></li>
+							<li><span>Phone</span><p>&nbsp:&nbsp+918866000596</p></li>
+							<li><span>Freelance</span><p>&nbsp:&nbspavailable</p></li>
+						</ul>
+						<center>
+								<button style="margin: 5% 0%;">Download Resume</button>
+						</center>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="skills" style="margin-bottom: 16%;">
+			<div style="margin: 1% 3%;padding: 1%;">
+				<div style="font-size: 3rem;font-weight: 900; color:#00A3E1;">Technical Skills</div>
+				
+				<table style="margin: 3% 0% 0% 5%;">
+					<tr>
+						<td>CP &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 10%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>HTML &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 60%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>CSS &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 65%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Data Structures &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 75%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>C++ &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 80%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>python &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 50%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Java &nbsp</td>
+						<td>
+							<div class="skill-back">
+								<div style="width: 70%;display: block;" class="skill-up"></div>
+							</div>
+						</td>
+					</tr>
+				</table>				
+			</div>
+		</section>
+		
+		<section id="education">
+			<div style="margin: 1% 3%;padding: 1%;">
+				<div style="font-size: 3rem;font-weight: 900; color:#00A3E1;">Education</div>
+				<div style="margin: 3%;border-left: 2px groove #77797C;padding: 2%;">
+					<div>
+						<p class="edu1">2019-present</p>
+						<p class="edu2">Computer Enginnering, <span class="edu3">Om Education Campus</span>.</p>
+						<p class="edu4">CPI-8.11</p>
+					</div>
+					<div>
+						<p class="edu1">2017-2019</p>
+						<p class="edu2">HSC boards, <span class="edu3">Sorath International school</span>.</p>
+						<p class="edu4">percentage-65</p>
+					</div>
+					<div>
+						<p class="edu1">2016-2017</p>
+						<p class="edu2">SSC boards, <span class="edu3">Welcome school</span>.</p>
+						<p class="edu4">percentage-80</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section id="contact" style="margin-bottom: 15%;">
+			<div style="margin: 1% 3%;padding: 1%;">
+				<div style="font-size: 3rem;font-weight: 900; color:#00A3E1;">Contact</div>	
+				<center>
+					<form>
+						<div style="margin:5% 0%;">
+							<input type="text" name="fname" id="fname" placeholder="Bhavin" required style=" "> 
+							<input type="text" name="lname" id="lname" placeholder="Agravat" required style=" "> 
+							<br>
+							<input type="text" name="email" id="email" placeholder="BhavinAgravat@gmail.com" required style=" "> 
+							<br>
+							<input type="text" name="topic" id="topic" placeholder="topic" required style=" "> 
+						</div>
+						<button type="submit" style="margin: 1% 0%;" >Submit</button>
+					</form>
+				</center>
+			</div>
+		</section>
+		
+		<footer></footer>
+	</div>
+	<script type="text/javascript">
+		var x = window.pageYOffset;
+		window.onscroll = function() {
+			var y = window.pageYOffset;
+			if(x > y){
+				document.getElementById("topbar").style.top = "0";
+			}
+			else
+			{
+				document.getElementById("topbar").style.top = "-50px";
+			}
+			x = y;
+		}
+	</script>
+</body>
+</html>
